@@ -20,4 +20,4 @@ Frontend snippet place iside head tag. Automatically disabled when kirby is in d
 <?php snippet('plausible'); ?>
 ```
 
-This plugin wouldn't happen without [@garethworld](https://github.com/garethworld) who kindly payed me for it and then wanted to have it released to Kirby community.
+This plugin wouldn't happen without [@garethworld](https://github.com/garethworld) who kindly hired me to make it and then wanted to have it released to Kirby community. Yaaaaay
