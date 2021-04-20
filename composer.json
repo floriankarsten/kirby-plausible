@@ -1,0 +1,21 @@
+{
+    "name": "floriankarsten/kirby-plausible",
+    "description": "",
+    "type": "kirby-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Florian Karsten",
+            "email": "code@floriankarsten.com"
+        }
+    ],
+    "require": {
+        "getkirby/composer-installer": "^1.1",
+        "php": ">=7.4.0"
+    },
+    "autoload": {
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}
