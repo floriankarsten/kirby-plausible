@@ -10,7 +10,7 @@ There is also `floriankarsten.plausible.domain` which allows you to overwrite `d
 config.php example
 ```php
 'floriankarsten.plausible' => [
-	'sharedLink' => 'https://plausible.io/share/element4.co.uk?auth=Jz0mCWTPu5opXi0sAgRrq',
+	'sharedLink' => 'https://plausible.io/share/yourwebsiteurl.com?auth=Jz0mCWTPu5opXi0sAgRrq',
 	'domain' => 'test.com' // not required if not set it will be taken from $site->url
 ];
 ```
