@@ -1,15 +1,30 @@
 <?php
 
 Kirby::plugin('floriankarsten/plausible', [
-    'api' => [
-        'routes' => [
-            [
-                'pattern' => 'plausible',
-                'action'  => function () {
-                    return option('floriankarsten.plausible');
-                }
-            ]
-        ]
+	'areas' => [
+		'plausible' => function ($kirby) {
+			return [
+				'label' => 'Analytics',
+				'icon' => 'account',
+				'disabled' => false,
+				'menu' => true,
+				'link' => 'plausible',
+				'views' => [
+					[
+						'pattern' => 'plausible',
+						'action'  => function () use ($kirby) {
+							return [
+								'component' => 'k-plausible-view',
+								'title' => 'Analytics',
+								'props' => [
+									'sharedLink' => option('floriankarsten.plausible.sharedLink')
+								],
+							];
+						}
+					]
+				]
+			];
+		}
 	],
 	'snippets' => [
 		'plausible' => __DIR__ . '/snippets/plausible.php'
