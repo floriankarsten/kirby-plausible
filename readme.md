@@ -3,7 +3,7 @@ Simple plugin providing plausible iframe panel view to kirby panel and simple fr
 
 ## How to use
 1. Create a shared link https://plausible.io/docs/shared-links
-2. Set `floriankarsten.plausible.shareLink` in config.php
+2. Set `floriankarsten.plausible.sharedLink` in config.php
 
 There is also `floriankarsten.plausible.domain` which allows you to overwrite `data-domain` in the frontend snippet.
 
