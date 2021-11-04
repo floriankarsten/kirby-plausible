@@ -1,6 +1,9 @@
 # Kirby Plausible
 Simple plugin providing plausible iframe panel view to kirby panel and simple frontend snippet.
 
+![CleanShot 2021-11-04 at 17 53 43](https://user-images.githubusercontent.com/4954323/140384031-efdf83d7-06a3-4ce3-a60b-3827fe63fd9c.png)
+
+
 ## How to use
 1. Create a shared link https://plausible.io/docs/shared-links
 2. Set `floriankarsten.plausible.sharedLink` in config.php
