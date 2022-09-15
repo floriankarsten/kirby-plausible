@@ -5,7 +5,7 @@ Kirby::plugin('floriankarsten/plausible', [
 		'plausible' => function ($kirby) {
 			return [
 				'label' => 'Analytics',
-				'icon' => 'account',
+				'icon' => 'chart',
 				'disabled' => false,
 				'menu' => true,
 				'link' => 'plausible',
