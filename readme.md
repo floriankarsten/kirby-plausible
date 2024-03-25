@@ -12,11 +12,15 @@ or download from releases
 
 There is also `floriankarsten.plausible.domain` which allows you to overwrite `data-domain` in the frontend snippet.
 
-config.php example
+`config.php` example
 ```php
 'floriankarsten.plausible' => [
 	'sharedLink' => 'https://plausible.io/share/yourwebsiteurl.com?auth=Jz0mCWTPu5opXi0sAgRrq',
-	'domain' => 'test.com' // not required if not set it will be taken from $site->url
+	'domain' => 'test.com', // not required if not set it will be taken from $site->url
+	// To use a self-hosted Plausible instance
+	//'scriptHost' => 'https://plausible.example.com',
+	// To use Plausible script extensions
+	//'scriptName' => 'plausible.outbound-links.exclusions'
 ];
 ```
 
