@@ -2,7 +2,6 @@
     "name": "floriankarsten/kirby-plausible",
     "description": "",
     "type": "kirby-plugin",
-    "version": "0.2.2",
     "license": "MIT",
     "authors": [
         {
