@@ -3,4 +3,7 @@
   min-width: 100%;
   height: 1600px;
   margin-inline: -1.5rem;
+  color-scheme: light;
+  background-color: transparent;
+  outline: none;
 }

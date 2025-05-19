@@ -7,10 +7,10 @@ panel.plugin("floriankarsten/plausible", {
 							<template v-if="sharedLink">
 								<iframe
 									plausible-embed
-									:src="sharedLink + '&embed=true&theme=' + theme + '&background=' + background"
-									scrolling="no"
+									:src="sharedLink + '&embed=true&theme=' + theme + '&background=transparent'"
 									frameborder="0"
 									loading="lazy"
+									scrolling="no"
 									class="plausible-iframe"
 								/>
 								<component is="script" async src="https://plausible.io/js/embed.host.js" />
@@ -29,9 +29,6 @@ panel.plugin("floriankarsten/plausible", {
 				sharedLink: String,
 			},
 			computed: {
-				background() {
-					return this.theme === "light" ? "%23f0f0f0" : "%231f1f1f";
-				},
 				theme() {
 					return this.$panel.theme?.current ?? "light";
 				},
