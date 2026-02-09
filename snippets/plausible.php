@@ -1,3 +1,21 @@
-<?php if(option('debug') !== true && !kirby()->user()): ?>
-<script defer data-domain="<?= option('floriankarsten.plausible.domain') ?? parse_url($kirby->url('index'))['host'] ?>" src="<?= option('floriankarsten.plausible.scriptHost') ?? 'https://plausible.io' ?>/js/<?= option('floriankarsten.plausible.scriptName') ?? 'plausible' ?>.js"></script>
-<?php endif; ?>
+<?php
+    if (option('debug') !== true && !kirby()->user()) {
+        return;
+    }
+
+    $scriptUrl = option('floriankarsten.plausible.scriptUrl');
+    $proxyEnabled = option('floriankarsten.plausible.proxy.enabled', false);
+    if ($proxyEnabled) {
+        $scriptUrl = url('plausible/script.js');
+    }
+?>
+<!-- Plausible Analytics -->
+<script async src="<?= $scriptUrl ?>"></script>
+<script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init({
+        <?php if ($proxyEnabled): ?>
+            endpoint: "/plausible/event"
+        <?php endif; ?>
+    })
+</script>
