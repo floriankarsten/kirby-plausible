@@ -1,21 +1,28 @@
 {
     "name": "floriankarsten/kirby-plausible",
-    "description": "",
+    "description": "Simple plugin providing Plausible tracking and iframe panel view to Kirby panel.",
     "type": "kirby-plugin",
     "license": "MIT",
     "authors": [
         {
             "name": "Florian Karsten",
             "email": "code@floriankarsten.com"
+        },
+        {
+            "name": "Till Sanders",
+            "email": "mail@till-sanders.de"
         }
     ],
     "require": {
         "getkirby/composer-installer": "^1.1",
-	"getkirby/cms": "^4.0 || ^5.0"
+        "getkirby/cms": "^4.0 || ^5.0"
     },
     "autoload": {
     },
     "config": {
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+        "allow-plugins": {
+            "getkirby/composer-installer": true
+        }
     }
 }
