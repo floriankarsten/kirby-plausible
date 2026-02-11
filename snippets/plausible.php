@@ -1,6 +1,8 @@
 <?php
-    if (option('debug') !== true && !kirby()->user()) {
-        return;
+    $isDebugging = option('debug') === true;
+    $isLoggedIn = kirby()->user() !== null;
+    if ($isDebugging || $isLoggedIn) {
+        return; // disable tracking for logged in users and when debugging is enabled
     }
 
     $scriptUrl = option('floriankarsten.plausible.scriptUrl');
